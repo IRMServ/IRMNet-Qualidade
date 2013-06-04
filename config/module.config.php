@@ -1,5 +1,5 @@
 <?php
-
+namespace Qualidade;
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -8,11 +8,21 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 return array(
+      'acl' => array(
+        'Qualidade' => array(
+                'QUALIDADE' => array(
+                'Qualidade\Controller\Index:index',              
+            ),
+            'TI' => array(
+                'Qualidade\Controller\Index:index',              
+            ),
+        )
+    ),
     'router' => array(
         'routes' => array(
             // This defines the hostname route which forms the base
             // of each "child" route
-            'qualidade' => array(
+            'garantia-da-qualidade' => array(
                 'type' => 'literal',
                 'options' => array(
                     'route' => '/qualidade',
